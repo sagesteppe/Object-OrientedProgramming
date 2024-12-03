@@ -9,7 +9,7 @@ format:
     theme: black
     highlight: pygments
     preview-links: auto
-    logo: ../pictures/CBG_Logos/NegauneeInstitute_CBG-Logo-FlowerMark.png
+    logo: ./pictures/CBG_Logos/NegauneeInstitute_CBG-Logo-FlowerMark.png
     chalkboard: 
       boardmarker-width: 5
     reveal_options:
@@ -59,7 +59,7 @@ rm(shhh)
 ```{r import Vector Data, echo = F, warning = F, message = F}
 # getwd()
 
-path <- file.path('..', 'spatial_lecture_data', 'sentinel_imagery')
+path <- file.path('.', 'spatial_lecture_data', 'sentinel_imagery')
 files.shp <- list.files(path, ".shp")
 
 dec_lakes_v <- read_sf(file.path(path, files.shp), quiet = T) %>% 
