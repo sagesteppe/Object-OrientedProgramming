@@ -398,7 +398,7 @@ rm(raster_dataframe)
 
 # Simple Features 
 
-- are data frames so have to be S3... 
+- are data frames so have to be S3...   
 - use a complex S3 list-column to store the geometry features 
 
 ```{r Object Types - Tibble Simple Feature 1, echo = F}
@@ -936,8 +936,8 @@ s3_class(s4_ob_office_hours)
 
 ::: {.column width = '40%'}
 <font size='5'>
-- S3/S4 objects can have a lot going on 'under the hood'
-- At their heart, they are performing operations on themselves. 
+- S3/S4 objects can have a lot going on 'under the hood'  
+- At their heart, they are performing operations on themselves.   
 </font> 
 :::
 ::::

@@ -304,8 +304,8 @@ Reed Benkendorf
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    1    0    1
-[2,]    1    0    1
-[3,]    1    0    0</code></pre>
+[2,]    1    1    0
+[3,]    1    0    1</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">otype</span>(raster_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -543,10 +543,10 @@ $class
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">attributes</span>(raster_dataframe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$names
- [1] "a" "k" "j" "e" "c" "f" "d" "h" "b" "g"
+ [1] "j" "a" "d" "f" "b" "h" "c" "g" "e" "k"
 
 $row.names
- [1] "R" "U" "Q" "S" "Y" "X" "N" "Z" "T" "W"
+ [1] "Z" "X" "V" "Y" "N" "S" "U" "W" "O" "Q"
 
 $class
 [1] "data.frame"</code></pre>
@@ -571,7 +571,8 @@ $class
 <section id="simple-features" class="title-slide slide level1 center">
 <h1>Simple Features</h1>
 <ul>
-<li>are data frames so have to be S3…</li>
+<li>are data frames so have to be S3…<br>
+</li>
 <li>use a complex S3 list-column to store the geometry features</li>
 </ul>
 <div class="cell" data-layout-align="center">
@@ -1427,7 +1428,9 @@ attr(,"package")
 </div>
 </div>
 </div><div class="column" style="width:40%;">
-<p><font size="5"> - S3/S4 objects can have a lot going on ‘under the hood’ - At their heart, they are performing operations on themselves. </font></p>
+<p><font size="5"> - S3/S4 objects can have a lot going on ‘under the hood’<br>
+- At their heart, they are performing operations on themselves.<br>
+</font></p>
 </div></div>
 <aside class="notes">
 <p>You will realize in short time, that the biggest hurdle to dealing with spatial data in R is how complex some of the structures may be. But I guarantee you all have seen more of the intricate workings of these objects than the vast majority of folks which utilize them. Just remember, to appease the validity functions and you will be fine.</p>
