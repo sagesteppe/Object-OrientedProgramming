@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "Object-OrientedProgramming.html#base-objects---character-vectors",
+    "href": "Object-OrientedProgramming.html#base-objects---character-vectors",
+    "title": "Objected Oriented Programming",
+    "section": "Base Objects - Character Vectors",
+    "text": "Base Objects - Character Vectors\n\nchar_v\n\n[1] \"Apple\"  \"Orange\" \"Banana\"\n\notype(char_v)\n\n[1] \"base\"\n\ns3_class(char_v)\n\n[1] \"character\""
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#base-objects---numeric-vectors",
+    "href": "Object-OrientedProgramming.html#base-objects---numeric-vectors",
+    "title": "Objected Oriented Programming",
+    "section": "Base Objects - Numeric Vectors",
+    "text": "Base Objects - Numeric Vectors\nLooking at our character vector we see that the output of sloop:otype (objectype) we see that this is a ‘base object’.\n\nnum_v\n\n[1] 1 2 3\n\notype(num_v)\n\n[1] \"base\"\n\ns3_class(num_v)\n\n[1] \"integer\" \"numeric\"\n\n\nLooking at our numeric vector we see that this object inherits both an integer and numeric type."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#base-objects---matrix",
+    "href": "Object-OrientedProgramming.html#base-objects---matrix",
+    "title": "Objected Oriented Programming",
+    "section": "Base Objects - Matrix",
+    "text": "Base Objects - Matrix\nWe can essentially think of a matrix as being 3 vectors bound side by side, and entered by either the rows or columns.\n\nraster_matrix\n\n     [,1] [,2] [,3]\n[1,]    1    0    1\n[2,]    1    0    1\n[3,]    1    0    0\n\notype(raster_matrix)\n\n[1] \"base\"\n\ns3_class(raster_matrix)\n\n[1] \"matrix\"  \"integer\" \"numeric\"\n\n\nThe matrix inherits multiple base classes, it is both a double and numeric. R has integers, doubles, and numeric types defined by is relatively loose with applying them."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#base-objects---list",
+    "href": "Object-OrientedProgramming.html#base-objects---list",
+    "title": "Objected Oriented Programming",
+    "section": "Base Objects - List",
+    "text": "Base Objects - List\n\ns3_class(raster_pieces_list)\n\n[1] \"list\"\n\notype(raster_pieces_list)\n\n[1] \"base\"\n\nrm(raster_pieces_list, rast_vals_char, raster_matrix)\n\nThese base objects are more of less capable of just storing values. I.e. In a sense we can put whatever we want into a vector and it will work out - if we have mixed data types they will be coerced to characters, but we can do it.\n\n\n[1] \"character\""
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#posixct",
+    "href": "Object-OrientedProgramming.html#posixct",
+    "title": "Objected Oriented Programming",
+    "section": "POSIXct",
+    "text": "POSIXct\nSo what is a POSIXct then?\n\nattributes(dates_of_imaging)\n\n$tzone\n[1] \"US/Pacific-New\"\n\n$class\n[1] \"POSIXct\" \"POSIXt\" \n\n\n\nan object with multiple attributes\none defines the time zone the data are stored as\nthe other defines a class\n\n\nWe see that two attributes are stored in that object. The first is the timezone, which is defined elsewhere in R (and I believe is inherited by R from other systems), but is notated within this object. Critically, We also have the formal ‘class’ definition of a POSIXct format."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#posixct-1",
+    "href": "Object-OrientedProgramming.html#posixct-1",
+    "title": "Objected Oriented Programming",
+    "section": "POSIXct",
+    "text": "POSIXct\n\n\nThe amount of seconds between 1970 and 2021-12-05 is: 1638662400\n\n\n\nthe values in a POSIXct are integers\n\nbut the objects convert them to a human readable date for viewing\n\n\nPOSIXct dates are all actually treated in R as the amount of seconds between an arbitrary date e.g. January 1st 1970, and the date of observation; so R is really keeping dates in a numeric format - but is hiding this from us! And converting the values into a more human friendly format more or less for display purposes only.\nThis is a new level of functionality that we have not directly considered yet this quarter. As mentioned we have used objects much like book pages. Now we see that certain objects, are able to refer to themselves to perform, for example, calculations and conversions."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#posixct-is-an-s3-object",
+    "href": "Object-OrientedProgramming.html#posixct-is-an-s3-object",
+    "title": "Objected Oriented Programming",
+    "section": "POSIXct is an S3 object",
+    "text": "POSIXct is an S3 object\n\nas.numeric(dates_of_imaging[1])\n\n[1] 1638662400\n\notype(dates_of_imaging)\n\n[1] \"S3\"\n\n\n\nWe know that at it’s core our object contains the seconds between the event and 1970\nIt has multiple attributes\nAnd it can perform calculations on itself\n\n\nObjects with the capability to store values in fields, and perform procedures upon themselves form the basis of Object Orientated Programming. In R we have two main OOP classes, S3 and S4. In general objects of both of these classes are ‘large’, however this is not always the case."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#units-objects-i",
+    "href": "Object-OrientedProgramming.html#units-objects-i",
+    "title": "Objected Oriented Programming",
+    "section": "Units objects I",
+    "text": "Units objects I\nLet’s take a look at the object type and it’s class.\n\notype(dstnce)\ns3_class(dstnce)\n\n\n\nA Units is an object of type: S3\n\n\nIt is its own units class: units"
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#doing-more-with-units",
+    "href": "Object-OrientedProgramming.html#doing-more-with-units",
+    "title": "Objected Oriented Programming",
+    "section": "Doing more with Units",
+    "text": "Doing more with Units\nWe can take a look at the attributes of a units object.\n\n\n\nattributes(dstnce)\n\n$units\n$numerator\n[1] \"yards\"\n\n$denominator\ncharacter(0)\n\nattr(,\"class\")\n[1] \"symbolic_units\"\n\n$class\n[1] \"units\"\n\n\nour ‘denominator’ slot is unused, let’s populate it\n\nlet’s establish our distance as a speed\n\nspeed &lt;- units::set_units(1.42, m/s)\nattributes(speed)\n\n$units\n$numerator\n[1] \"m\"\n\n$denominator\n[1] \"s\"\n\nattr(,\"class\")\n[1] \"symbolic_units\"\n\n$class\n[1] \"units\""
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#data-frame",
+    "href": "Object-OrientedProgramming.html#data-frame",
+    "title": "Objected Oriented Programming",
+    "section": "Data frame",
+    "text": "Data frame\nA shocking S3 object is the data frame it has a defined class\n\notype(raster_dataframe)\n\n[1] \"S3\"\n\nattributes(raster_dataframe)\n\n$names\n [1] \"a\" \"k\" \"j\" \"e\" \"c\" \"f\" \"d\" \"h\" \"b\" \"g\"\n\n$row.names\n [1] \"R\" \"U\" \"Q\" \"S\" \"Y\" \"X\" \"N\" \"Z\" \"T\" \"W\"\n\n$class\n[1] \"data.frame\"\n\n\n\nWe see that of the non-base objects, the most common object is S3. Actually, surprise surprise the amazing data frame has been hiding out as an S3 object this whole time! You may have actually seen an error message indicating this at some point… So if we look at the attributes of a data frame we see that we have both row and columns names, and we also have a formal definition of the class being a data frame, which in part consists of code demanding that our data frame be rectangular in nature.\nFinally we turn our attention to one slightly more complex S3 object."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#list-columns",
+    "href": "Object-OrientedProgramming.html#list-columns",
+    "title": "Objected Oriented Programming",
+    "section": "list columns",
+    "text": "list columns\n\n\n\n\nknitr::kable(head(iris))\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n\n\n\nCreate a list col of the Iris measurements by species and flower part.\n\niris &lt;- nest(iris, petal = starts_with(\"Petal\"), \n       sepal = starts_with(\"Sepal\")) \n\n\n\n\n\nhead(iris)\n\n# A tibble: 3 × 3\n  Species    petal             sepal            \n  &lt;fct&gt;      &lt;list&gt;            &lt;list&gt;           \n1 setosa     &lt;tibble [50 × 2]&gt; &lt;tibble [50 × 2]&gt;\n2 versicolor &lt;tibble [50 × 2]&gt; &lt;tibble [50 × 2]&gt;\n3 virginica  &lt;tibble [50 × 2]&gt; &lt;tibble [50 × 2]&gt;\n\nhead(iris[[2]][[1]]) # see 1st row 2nd column\n\n# A tibble: 6 × 2\n  Petal.Length Petal.Width\n         &lt;dbl&gt;       &lt;dbl&gt;\n1          1.4         0.2\n2          1.4         0.2\n3          1.3         0.2\n4          1.5         0.2\n5          1.4         0.2\n6          1.7         0.4\n\nstr(iris$petal[[1]]) # structure of 1st row of petal column\n\ntibble [50 × 2] (S3: tbl_df/tbl/data.frame)\n $ Petal.Length: num [1:50] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num [1:50] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n\n\n\n\n\nIf we take a close look at the first for of the second column, that for I. setosa, we see all of the short and narrow petal measurements we are familiar with for this species.\nIn this example we see that each element in ‘petal’ contains a list of its own, each of which has a data frame with a column storing both the Petal Length and Petal Width values. Each row of each list column (petal & sepal) we see in this tibble is like this.\nSo what the developers of sf did is to create an S3 object which can hold all of the spatial information in a list column - without you really realizing this information is there."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#sf-object",
+    "href": "Object-OrientedProgramming.html#sf-object",
+    "title": "Objected Oriented Programming",
+    "section": "sf object",
+    "text": "sf object\n\ns3_class(dec_lakes_sf)\n\n[1] \"sf\"         \"tbl_df\"     \"tbl\"        \"data.frame\"\n\n\n\n\n\n\nhead(dec_lakes_sf[,c(2:3,6)])\n\n\n\n\nSimple feature collection with 6 features and 2 fields\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: -120.6635 ymin: 39.64317 xmax: -119.4015 ymax: 40.21617\nGeodetic CRS:  WGS 84\nPrecision:     50 \n# A tibble: 6 × 3\n  Water          Data_source                                            geometry\n  &lt;chr&gt;          &lt;chr&gt;                                             &lt;POLYGON [°]&gt;\n1 Pyramid_Lake   Sentinel2   ((-119.599 40.21368, -119.5925 40.20994, -119.5516…\n2 Davis_Lake     Sentinel2   ((-120.5374 39.9152, -120.5238 39.92064, -120.5309…\n3 Frenchman_Lake Sentinel2   ((-120.2149 39.936, -120.2095 39.93905, -120.2066 …\n4 Silver_Lake    Sentinel2   ((-119.9159 39.65733, -119.9019 39.65779, -119.901…\n5 Swan_lake      Sentinel2   ((-119.8356 39.68163, -119.8194 39.6741, -119.8158…\n6 Gold_Lake      Sentinel2   ((-120.6635 39.66946, -120.6421 39.68097, -120.633…\n\n\n\n\n\nattributes(dec_lakes_sf$geometry)\n\n\n\n\n$n_empty\n[1] 0\n\n$crs\nCoordinate Reference System:\n  User input: WGS 84 \n  wkt:\nGEOGCRS[\"WGS 84\",\n    DATUM[\"World Geodetic System 1984\",\n        ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n            LENGTHUNIT[\"metre\",1]]],\n    PRIMEM[\"Greenwich\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433]],\n    CS[ellipsoidal,2],\n        AXIS[\"latitude\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        AXIS[\"longitude\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n    ID[\"EPSG\",4326]]\n\n$class\n[1] \"sfc_POLYGON\" \"sfc\"        \n\n$precision\n[1] 50\n\n$bbox\n      xmin       ymin       xmax       ymax \n-120.66350   39.64317 -119.40150   40.57838 \n\n\n\n\n\nThis output is understandably a little much, but these are all of the attributes of a Simple Feature Collection which is hidden in the geometry column of a simple feature. Clever right?"
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#spatial-objects",
+    "href": "Object-OrientedProgramming.html#spatial-objects",
+    "title": "Objected Oriented Programming",
+    "section": "Spatial* Objects",
+    "text": "Spatial* Objects\nJust like S3 objects, S4 objects classes follow certain schema. We’ll use a SpatialPolygonsDataFrame as our example here."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#slots",
+    "href": "Object-OrientedProgramming.html#slots",
+    "title": "Objected Oriented Programming",
+    "section": "Slots",
+    "text": "Slots\n\nContain different forms of data, especially of unequal length and hence do not fit into a data frame\n\nS4 objects can be stored in S3, base, or other objects!\n\n\n\n\nstr(dec_lakes_sp, max.level = 2)\n\n\n\n\nFormal class 'SpatialPolygonsDataFrame' [package \"sp\"] with 5 slots\n  ..@ data       :'data.frame': 14 obs. of  5 variables:\n  ..@ polygons   :List of 14\n  ..@ plotOrder  : int [1:14] 1 11 7 13 2 8 3 12 10 5 ...\n  ..@ bbox       : num [1:2, 1:2] -120.7 39.6 -119.4 40.6\n  .. ..- attr(*, \"dimnames\")=List of 2\n  ..@ proj4string:Formal class 'CRS' [package \"sp\"] with 1 slot\n  ..$ comment: chr \"TRUE\"\n\n\n\n\n\nsN &lt;- slotNames(dec_lakes_sp)\nfor (i in seq_along(sN)){\n  print(paste0(sN[i], ': ', \n               otype(slot(dec_lakes_sp, sN[i])\n                     )))\n}\n\n[1] \"data: S3\"\n[1] \"polygons: base\"\n[1] \"plotOrder: base\"\n[1] \"bbox: base\"\n[1] \"proj4string: S4\"\n\notype(slot(dec_lakes_sp, 'polygons')[[1]])\n\n[1] \"S4\"\n\n\n\n\nIn addition to their more strict definitions of classes, S4 objects have another feature which S3 objects lack - Slots. Slots superficially resemble lists in the viewer of RStudio, i.e. they have nested components, but are really their own distinct entities. A SpatialPolygonsDataFrame contains 4 slots, each of these contains a type of data. Note that each slot is accessed using an ‘@’ (still pronounced: ‘at’) symbol."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#dataframe-slot",
+    "href": "Object-OrientedProgramming.html#dataframe-slot",
+    "title": "Objected Oriented Programming",
+    "section": "DataFrame Slot",
+    "text": "DataFrame Slot\n\n\n\nhead(slot(dec_lakes_sp, 'data'))[,c(2:3,5)]\n\n\n\n\n           Water Data_source       Date\n1   Pyramid_Lake   Sentinel2 2021-12-05\n2     Davis_Lake   Sentinel2 2021-12-05\n3 Frenchman_Lake   Sentinel2 2021-12-05\n4    Silver_Lake   Sentinel2 2021-12-05\n5      Swan_lake   Sentinel2 2021-12-05\n6      Gold_Lake   Sentinel2 2021-12-05\n\n\n\n\n\nattributes(slot(dec_lakes_sp, 'data'))\n\n$names\n[1] \"id\"          \"Water\"       \"Data_source\" \"Processing\"  \"Date\"       \n\n$class\n[1] \"data.frame\"\n\n$row.names\n [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14\n\notype(slot(dec_lakes_sp, 'data'))\n\n[1] \"S3\"\n\nwriteLines(s3_class(slot(dec_lakes_sp, 'data')))\n\ndata.frame\n\n\n\n\nHere we access the contents of a slot named ‘plotOrder’. We see that this slot simply contains an integer vector. What this vector specifies is the order in which the polygons in this object should be plotted if and when used for making maps. While this information is stored simply as an object of the class ‘base’, other parts of the SpatialPolygonsDataFrame know how to perform operations with this information.\nWe can see that the ‘DataFrame’ portion of the SpatialPolygonsDataFrame has actually been relegated to it’s own slot as well.\nWhile the two slots above, @plotOrder & @data, contain relatively simple objects (base and S3 respectively). The remaining two slots, which are both S4 classes contain all of the spatial information."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#proj-slot",
+    "href": "Object-OrientedProgramming.html#proj-slot",
+    "title": "Objected Oriented Programming",
+    "section": "Proj Slot",
+    "text": "Proj Slot\n\n\n\ns3_class(slot(dec_lakes_sp, 'proj4string'))\n\n[1] \"CRS\"\nattr(,\"package\")\n[1] \"sp\"\n\notype(slot(dec_lakes_sp, 'proj4string'))\n\n[1] \"S4\"\n\n\n\n\nattributes(slot(dec_lakes_sp, 'proj4string'))\n\n$projargs\n[1] \"+proj=longlat +datum=WGS84 +no_defs\"\n\n$class\n[1] \"CRS\"\nattr(,\"package\")\n[1] \"sp\"\n\n$comment\n[1] \"GEOGCRS[\\\"WGS 84\\\",\\n    DATUM[\\\"World Geodetic System 1984\\\",\\n        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,\\n            LENGTHUNIT[\\\"metre\\\",1]]],\\n    PRIMEM[\\\"Greenwich\\\",0,\\n        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],\\n    CS[ellipsoidal,2],\\n        AXIS[\\\"latitude\\\",north,\\n            ORDER[1],\\n            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],\\n        AXIS[\\\"longitude\\\",east,\\n            ORDER[2],\\n            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],\\n    ID[\\\"EPSG\\\",4326]]\"\n\n\n\n\nThe first of the S4 slots is the proj4string (Proj is an awesome open source library for performing conversions between projections), which contains a class “CRS” which defines the Coordinate Reference System of this SpatialPolygonsDataFrame. Hence any time you modify the CRS of a SPDF, you are interacting with this slot."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#polygons-slot",
+    "href": "Object-OrientedProgramming.html#polygons-slot",
+    "title": "Objected Oriented Programming",
+    "section": "Polygons Slot",
+    "text": "Polygons Slot\n\n\n\notype(slot(dec_lakes_sp, 'polygons')[[9]])\n\n[1] \"S4\"\n\n\nContains the actual spatial data, e.g. coordinates and their relations\n\n\nattributes(slot(dec_lakes_sp, 'polygons')[[9]]) \n\n$Polygons\n$Polygons[[1]]\nAn object of class \"Polygon\"\nSlot \"labpt\":\n[1] -120.26621   40.15194\n\nSlot \"area\":\n[1] 0.0002266631\n\nSlot \"hole\":\n[1] FALSE\n\nSlot \"ringDir\":\n[1] 1\n\nSlot \"coords\":\n          [,1]     [,2]\n[1,] -120.2684 40.16119\n[2,] -120.2577 40.16024\n[3,] -120.2604 40.14826\n[4,] -120.2657 40.14006\n[5,] -120.2657 40.14006\n[6,] -120.2758 40.14942\n[7,] -120.2684 40.16119\n\n\n\n$plotOrder\n[1] 1\n\n$labpt\n[1] -120.26621   40.15194\n\n$ID\n[1] \"9\"\n\n$area\n[1] 0.0002266631\n\n$class\n[1] \"Polygons\"\nattr(,\"package\")\n[1] \"sp\"\n\n$comment\n[1] \"0\"\n\n\n\n\nThe final, and most complex of the two S4 slots in a SpatialPolygonsDataFrame is the Polygons slot. This is where the coordinates, and topological information, of each polygon is stored.\nHere we are looking at the smallest of the polygons in our SPDF (see the plotOrder?). These data are replicated appropriately for each of the other polygons in this object.\nWhile this S3 object is more complex, we can see how the components held in multiple slots are able to work together to perform operations using the data held in disparate fields throughout the object."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#raster-objects",
+    "href": "Object-OrientedProgramming.html#raster-objects",
+    "title": "Objected Oriented Programming",
+    "section": "Raster Objects",
+    "text": "Raster Objects\nFinally we have the Raster Layer which is a rather large and complex S4 unit, composed of 12 main S4 slots… Each of these then having from 1 to 13 slots (these second slots quite small, and not uncommonly consisting of a single value).\n\nslotNames(example_raster_dec)\n\n [1] \"file\"     \"data\"     \"legend\"   \"title\"    \"extent\"   \"rotated\" \n [7] \"rotation\" \"ncols\"    \"nrows\"    \"crs\"      \"srs\"      \"history\" \n[13] \"z\"       \n\n\n\n\nClass: S4\n\n\nClass type: RasterLayer\n\n\n.SingleLayerData\n\n\ninteger\nnumeric\n\n\n\nRaster Layers are large enough that we unfortunately cannot go into it much during class, but I do encourage the curious to investigate it on your own. Do keep in mind that it has a slot of ‘CRS’ which we just saw in our SP object, and it also has a slot of ‘extent’ which we defined ourselves earlier.\nIf we look at our data slot we see that we have an ‘integer numeric’ type - which is typically how a raster is loaded. I will concede up to this point I said to think about a raster as matrix, but we see ours is actually loaded with an integer. Remember that in R both matrices and data frames are vectors. Remember a main difference between a vector and a matrix, is that a matrix has dimensions, i.e. it knows how many values need to be in each row. While these data are not explicit here, they can be found in another slot."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#create-a-simple-s3-object",
+    "href": "Object-OrientedProgramming.html#create-a-simple-s3-object",
+    "title": "Objected Oriented Programming",
+    "section": "Create a simple S3 object",
+    "text": "Create a simple S3 object\nCreating an S3 object is as simple as defining a class with class\n\n\n\ncourse &lt;- list(\n  name = c(\"Lecture\", \"Lecture\", \"Laboratory\", \"Laboratory\"),\n  wing = c('L', 'L','M','L'),\n  room = c(170, 170, 166, 62),\n  day  = c('T', 'TH', 'F', 'F'),\n  time = c('3:30-4:50', '3:30-4:50', '12:00-12:50', '2:00-3:50')\n)\n\n\n\n# we have only made a list so far \ns3_class(course) \n\n[1] \"list\"\n\notype(course)\n\n[1] \"base\"\n\nclass(course) &lt;- \"Class_times\" \n# by setting a class attribute we have \n# created an S3 object\n\ns3_class(course)\n\n[1] \"Class_times\"\n\notype(course)\n\n[1] \"S3\"\n\n\n\n\nMaybe some of you have not noticed yet but you will soon enough; your TA has some traits in common with say Luna Lovegood, and finds it hard to make it to meetings and things. Here we makes a course object which he can save into his R environment so he can just click on it to remind him when he is suppose to show up for class.\nWe see that the above object is honestly, just a list that we arbitrarily made an S3 object. That is more or less what it takes to become an S3 object, us just saying hey ‘this is a class’ !\nBut we can do things with S3 objects which make them useful to construct. For example, we can add quality assurance checks to our objects."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#create-a-more-complex-s3-object",
+    "href": "Object-OrientedProgramming.html#create-a-more-complex-s3-object",
+    "title": "Objected Oriented Programming",
+    "section": "Create a more complex S3 object",
+    "text": "Create a more complex S3 object\nA more complex S3 object can have some unstructured error checking in it.\n\n\n\ncourse &lt;- function(n, w, r, d, t){\n  \n  values &lt;- list(\n    name = n, \n    wing = w, \n    room = r, \n    day = d, \n    time = t)\n    \n  '%notin%' &lt;- Negate('%in%')\n  type &lt;- c('Lecture', 'Laboratory', 'Seminar')\n  tech_letters &lt;- LETTERS[1:13]\n  days &lt;- c('M', 'T', 'W', 'TH', 'F', 'S', 'SU')\n  \n  if(any(w %notin% tech_letters)) \n    stop(\"This wing is not valid\")\n  if(any(d %notin% days)) \n    stop(\"This day is not valid\")\n  if(any(n %notin% type)) \n    stop(\"This course type is not valid\")\n  \n  attr(values, \"class\") &lt;- \"Course\"\n  return(values)\n  \n}\n\n\n\ncourse_success &lt;- course(\n  c(\"Lecture\", \"Lecture\", \"Laboratory\", \"Laboratory\"),  \n  c('L', 'L','M','L'),\n  c(170,170,166,62), \n  c('T','TH','F','F'), \n  c('3:30-4:50','3:30-4:50', '12:00-12:50', '2:00-3:50')\n  )\n\n\n\nYour TA made a very poor first list of places he had to be for class, and ended up wandering around tech lost for an hour. He decided to make a slightly more robust Sw object so this did not happen again.\nHere we see that an object of the S3 class can be much more than merely a collection of attributes. An S3 object can perform quality assurance steps to ensure the data comply to certain types, and that values are in appropriate units etc.\nIf the data are these thoroughly defined, we then see this opens the opportunity for an S3 object to act upon other parts of itself. While in the example above we put in values which match the acceptable criteria of the class we have defined, in the example below will violate the standards of our S3 Object."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#s3-failure",
+    "href": "Object-OrientedProgramming.html#s3-failure",
+    "title": "Objected Oriented Programming",
+    "section": "S3 failure",
+    "text": "S3 failure\n\n\n\ncourse_fail &lt;- course(\n  \"Lecture\",  \n  'Z', # THIS IS NOT DEFINED\n  213, \n  'TH', \n  '2:00-3:50')\n\n\nError in course(\"Lecture\", \"Z\", 213, \"TH\", \"2:00-3:50\") : \nThis wing is not valid\"\n\n\n\nWe tried to populate our course S3 object with a wing which does not exist\nR prevented this action, and errored out our entry\n\n\n\nIn the above example, if you input the wrong Wing in Tech, or the wrong day of week abbreviation, this class will angrily let you know and refuse to take your input. I assume this error can be relegated to a warning - but we will not get into those aspects of coding in this class.\nOne, possible, draw back of an s3 object is that it is relatively lax."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#create-a-simple-s4-object-i",
+    "href": "Object-OrientedProgramming.html#create-a-simple-s4-object-i",
+    "title": "Objected Oriented Programming",
+    "section": "Create a simple S4 object I",
+    "text": "Create a simple S4 object I\nAn S4 object can be similar to S3, except we specify that we are using slots\n\n\n\nsetClass(\"Office_Hours\", \n         slots=\n           list(\n            Instructor=\"character\",\n            Wing=\"character\",\n            Number=\"numeric\",\n            Days=\"character\",\n            Time=\"numeric\",\n            Smartroom=\"logical\",\n            Windows=\"logical\"\n            )\n         )\n\n\n\nSeven slot object, each slot with a specified data type\n\nWill only check that input to each slot matches the data type\n\n\n\n\nThe s4 object is not lax. Here we define the data type which each of these slots will accept. If the value you try to put in does not match, the object will not be created."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#create-a-simple-s4-object-ii",
+    "href": "Object-OrientedProgramming.html#create-a-simple-s4-object-ii",
+    "title": "Objected Oriented Programming",
+    "section": "Create a simple S4 object II",
+    "text": "Create a simple S4 object II\nWe can populate our S4 object like this, notice that now we define the slots the values go into.\n\ns4_ob_office_hours &lt;- new(\"Office_Hours\", \n  Instructor = c('Benkendorf','Scholl','Benkendorf','Scholl'),\n  Wing = c('F', 'F', 'G', 'B'),\n  Number = c(380, 380, 278, 138),\n  Days = c(\"M\", \"W\", 'T', 'F'),\n  Time = c(8, 11, 9, 3),\n  Smartroom = c(TRUE, F, T, F),\n  Windows = c(FALSE, T, T, F)\n)\n\n\nIn it’s simplest form an s4 object may be constructed via the setClass function. While this object is able to regulate the data types which are entered to each column, it cannot do much more."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#create-a-more-complex-s4-object-i",
+    "href": "Object-OrientedProgramming.html#create-a-more-complex-s4-object-i",
+    "title": "Objected Oriented Programming",
+    "section": "Create a more complex S4 object I",
+    "text": "Create a more complex S4 object I\nValidity functions ensure that not only are our data the correct type, they even match a pre-specified value.\n\n\n\noffice_hrs &lt;- setClass(\"Office_Hours\", \n         \n         slots=c(\n           Instructor=\"character\",\n           Wing=\"character\",\n           Number=\"numeric\",\n           Days=\"character\",\n           Time=\"numeric\",\n           Smartroom=\"logical\",\n           Windows=\"logical\"\n           ),\n         \n        validity=function(object){\n          \n            '%notin%' &lt;- Negate('%in%')\n            tech_letters &lt;- LETTERS[14:26]\n            days &lt;- c('M', 'T', 'W', 'TH', 'F', 'S', 'SU')\n            instructors &lt;- c('Scholl', 'Benkendorf')\n                \n            if(any(object@Instructor != instructors))\n              stop(\"This Instructor is not valid\")\n            if(any(object@Wing %in% tech_letters))\n              stop(\"This Wing is not valid\")\n            if(any(object@Days %notin% days)) \n              stop(\"This Day is not valid\")\n  }\n)\n\n\n - Mandates the appropriate data type is entered\n- Checks that the ‘Wing’ we enter exists in the Tech Building\n- Ensures that a valid Instructor and day abbreviation is entered\n- Object clearly capable of performing procedures on itself."
+  },
+  {
+    "objectID": "Object-OrientedProgramming.html#populate-a-more-complex-s4-object-ii",
+    "href": "Object-OrientedProgramming.html#populate-a-more-complex-s4-object-ii",
+    "title": "Objected Oriented Programming",
+    "section": "Populate a more complex S4 object II",
+    "text": "Populate a more complex S4 object II\n\n\n\ns4_ob_office_hours &lt;- office_hrs( \n  Instructor = c('Scholl', 'Benkendorf', 'Scholl', 'Benkendorf'),\n  Wing = c('A', 'F', 'B', 'B'),\n  Number = c(123, 412, 278, 138),\n  Days = c(\"M\", \"W\", 'T', 'F'),\n  Time = c(8, 11, 9, 3),\n  Smartroom = c(TRUE, F, T, F),\n  Windows = c(FALSE, T, T, F)\n)\n\notype(s4_ob_office_hours)\n\n[1] \"S4\"\n\ns3_class(s4_ob_office_hours)\n\n[1] \"Office_Hours\"\nattr(,\"package\")\n[1] \".GlobalEnv\"\n\n\n\n - S3/S4 objects can have a lot going on ‘under the hood’ - At their heart, they are performing operations on themselves. \n\n\nYou will realize in short time, that the biggest hurdle to dealing with spatial data in R is how complex some of the structures may be. But I guarantee you all have seen more of the intricate workings of these objects than the vast majority of folks which utilize them. Just remember, to appease the validity functions and you will be fine."
+  }
+]

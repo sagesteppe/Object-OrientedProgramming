@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Object-OrientedProgramming_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Object-OrientedProgramming_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Object-OrientedProgramming_files/libs/quarto-html/popper.min.js"></script>
-<script src="Object-OrientedProgramming_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Object-OrientedProgramming_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Object-OrientedProgramming_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Object-OrientedProgramming_files/libs/quarto-html/quarto-syntax-highlighting-dark-474c6d7e63be50eb6972897072b39b27.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-474c6d7e63be50eb6972897072b39b27.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.36">
 
   <meta name="author" content="Reed Benkendorf">
@@ -15,8 +15,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Object-OrientedProgramming_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Object-OrientedProgramming_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,14 +95,14 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="Object-OrientedProgramming_files/libs/revealjs/dist/theme/quarto-5b48f34d633aed70c74c672477009ffc.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-5b48f34d633aed70c74c672477009ffc.css">
   <link rel="stylesheet" href="custom.css">
-  <link href="Object-OrientedProgramming_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Object-OrientedProgramming_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Object-OrientedProgramming_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Object-OrientedProgramming_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="Object-OrientedProgramming_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="Object-OrientedProgramming_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -249,29 +249,29 @@ Reed Benkendorf
 <h1>Base Objects Reviewed</h1>
 <p>Some of the most common base objects are vectors, matrices, and lists.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>char_v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Apple'</span>, <span class="st">'Orange'</span>, <span class="st">'Banana'</span>)</span>
-<span id="cb1-2"><a href=""></a>num_v <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
-<span id="cb1-3"><a href=""></a>raster_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">size =</span> <span class="dv">9</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">ncol =</span> <span class="dv">3</span>)</span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a>raster_pieces_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb1-6"><a href=""></a>  <span class="at">Vector =</span> char_v, </span>
-<span id="cb1-7"><a href=""></a>  <span class="at">Matrix =</span> raster_matrix, </span>
-<span id="cb1-8"><a href=""></a>  <span class="at">Dataframe =</span> <span class="fu">setNames</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="fu">data.frame</span>(raster_matrix))</span>
-<span id="cb1-9"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>char_v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Apple'</span>, <span class="st">'Orange'</span>, <span class="st">'Banana'</span>)</span>
+<span id="cb1-2"><a></a>num_v <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
+<span id="cb1-3"><a></a>raster_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">size =</span> <span class="dv">9</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a>raster_pieces_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-6"><a></a>  <span class="at">Vector =</span> char_v, </span>
+<span id="cb1-7"><a></a>  <span class="at">Matrix =</span> raster_matrix, </span>
+<span id="cb1-8"><a></a>  <span class="at">Dataframe =</span> <span class="fu">setNames</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="fu">data.frame</span>(raster_matrix))</span>
+<span id="cb1-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="base-objects---character-vectors" class="slide level2">
 <h2>Base Objects - Character Vectors</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>char_v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>char_v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Apple"  "Orange" "Banana"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">otype</span>(char_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">otype</span>(char_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "base"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">s3_class</span>(char_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">s3_class</span>(char_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -281,15 +281,15 @@ Reed Benkendorf
 <h2>Base Objects - Numeric Vectors</h2>
 <p>Looking at our character vector we see that the output of <code>sloop:otype</code> (objectype) we see that this is a ‘base object’.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>num_v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>num_v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">otype</span>(num_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">otype</span>(num_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "base"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">s3_class</span>(num_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">s3_class</span>(num_v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer" "numeric"</code></pre>
 </div>
@@ -300,18 +300,18 @@ Reed Benkendorf
 <h2>Base Objects - Matrix</h2>
 <p>We can essentially think of a matrix as being 3 vectors bound side by side, and entered by either the rows or columns.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a>raster_matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>raster_matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
-[1,]    0    0    0
-[2,]    1    1    0
-[3,]    1    0    1</code></pre>
+[1,]    1    0    1
+[2,]    1    0    1
+[3,]    1    0    0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">otype</span>(raster_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">otype</span>(raster_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "base"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a><span class="fu">s3_class</span>(raster_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">s3_class</span>(raster_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "matrix"  "integer" "numeric"</code></pre>
 </div>
@@ -321,15 +321,15 @@ Reed Benkendorf
 <section id="base-objects---list" class="slide level2">
 <h2>Base Objects - List</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a><span class="fu">s3_class</span>(raster_pieces_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">s3_class</span>(raster_pieces_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "list"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="fu">otype</span>(raster_pieces_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">otype</span>(raster_pieces_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "base"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="fu">rm</span>(raster_pieces_list, rast_vals_char, raster_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">rm</span>(raster_pieces_list, rast_vals_char, raster_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>These base objects are more of less capable of just <em>storing</em> values. I.e. In a sense we can put whatever we want into a vector and it will work out - if we have mixed data types they will be coerced to characters, <em>but</em> we can do it.</p>
 <div class="cell" data-layout-align="center">
@@ -343,18 +343,18 @@ Reed Benkendorf
 <h1>Intro to S3 Objects</h1>
 <p>Let’s take a look at our vector of <code>POSIXct</code> time zones, which to me (a human) look like numbers separated by dashes.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>dates_of_imaging[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>dates_of_imaging[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2021-12-05"</code></pre>
 </div>
 </div>
 <p>However, it isn’t a character vector (which we would expect because of the dashes), nor a numeric vector.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="fu">is.character</span>(dates_of_imaging[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">is.character</span>(dates_of_imaging[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">is.numeric</span>(dates_of_imaging[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">is.numeric</span>(dates_of_imaging[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
@@ -364,7 +364,7 @@ Reed Benkendorf
 <h2>POSIXct</h2>
 <p>So what is a <code>POSIXct</code> then?</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">attributes</span>(dates_of_imaging)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">attributes</span>(dates_of_imaging)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$tzone
 [1] "US/Pacific-New"
@@ -422,11 +422,11 @@ $class
 <section id="posixct-is-an-s3-object" class="slide level2">
 <h2>POSIXct is an S3 object</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">as.numeric</span>(dates_of_imaging[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">as.numeric</span>(dates_of_imaging[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1638662400</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a><span class="fu">otype</span>(dates_of_imaging)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">otype</span>(dates_of_imaging)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S3"</code></pre>
 </div>
@@ -456,16 +456,16 @@ $class
 <p>Another S3 object which looks like a vector is an <code>units</code> object.</p>
 <p>When we define a units object, we can simply supply a number for value, and a unit of measurement.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a>dstnce <span class="ot">&lt;-</span> units<span class="sc">::</span><span class="fu">set_units</span>(<span class="fl">1.42</span>, meter)</span>
-<span id="cb39-2"><a href=""></a><span class="fu">print</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>dstnce <span class="ot">&lt;-</span> units<span class="sc">::</span><span class="fu">set_units</span>(<span class="fl">1.42</span>, meter)</span>
+<span id="cb39-2"><a></a><span class="fu">print</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1.42 [m]</code></pre>
 </div>
 </div>
 <p>These objects can also perform procedures on themselves, such as converting between meters and yards.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a><span class="fu">units</span>(dstnce) <span class="ot">&lt;-</span> units<span class="sc">::</span><span class="fu">make_units</span>(yards) </span>
-<span id="cb41-2"><a href=""></a><span class="fu">print</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">units</span>(dstnce) <span class="ot">&lt;-</span> units<span class="sc">::</span><span class="fu">make_units</span>(yards) </span>
+<span id="cb41-2"><a></a><span class="fu">print</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1.552931 [yards]</code></pre>
 </div>
@@ -475,8 +475,8 @@ $class
 <h2>Units objects I</h2>
 <p>Let’s take a look at the object type and it’s class.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="fu">otype</span>(dstnce)</span>
-<span id="cb43-2"><a href=""></a><span class="fu">s3_class</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">otype</span>(dstnce)</span>
+<span id="cb43-2"><a></a><span class="fu">s3_class</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
@@ -493,7 +493,7 @@ $class
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href=""></a><span class="fu">attributes</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">attributes</span>(dstnce)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$units
 $numerator
@@ -513,8 +513,8 @@ $class
 </div><div class="column" style="width:50%;">
 <p>let’s establish our distance as a speed</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href=""></a>speed <span class="ot">&lt;-</span> units<span class="sc">::</span><span class="fu">set_units</span>(<span class="fl">1.42</span>, m<span class="sc">/</span>s)</span>
-<span id="cb48-2"><a href=""></a><span class="fu">attributes</span>(speed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a>speed <span class="ot">&lt;-</span> units<span class="sc">::</span><span class="fu">set_units</span>(<span class="fl">1.42</span>, m<span class="sc">/</span>s)</span>
+<span id="cb48-2"><a></a><span class="fu">attributes</span>(speed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$units
 $numerator
@@ -536,17 +536,17 @@ $class
 <h2>Data frame</h2>
 <p>A shocking S3 object is the data frame it has a defined class</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href=""></a><span class="fu">otype</span>(raster_dataframe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">otype</span>(raster_dataframe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S3"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href=""></a><span class="fu">attributes</span>(raster_dataframe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">attributes</span>(raster_dataframe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$names
- [1] "c" "d" "b" "a" "i" "f" "k" "e" "j" "g"
+ [1] "a" "k" "j" "e" "c" "f" "d" "h" "b" "g"
 
 $row.names
- [1] "O" "P" "U" "T" "V" "R" "Y" "X" "Z" "S"
+ [1] "R" "U" "Q" "S" "Y" "X" "N" "Z" "T" "W"
 
 $class
 [1] "data.frame"</code></pre>
@@ -600,7 +600,7 @@ $class
 <div class="column" style="width:45%;">
 <p><font size="5"></font></p><font size="5">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href=""></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(iris))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(iris))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <thead>
@@ -661,14 +661,14 @@ $class
 </div>
 <p>Create a list col of the Iris measurements by species and flower part.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href=""></a>iris <span class="ot">&lt;-</span> <span class="fu">nest</span>(iris, <span class="at">petal =</span> <span class="fu">starts_with</span>(<span class="st">"Petal"</span>), </span>
-<span id="cb56-2"><a href=""></a>       <span class="at">sepal =</span> <span class="fu">starts_with</span>(<span class="st">"Sepal"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a>iris <span class="ot">&lt;-</span> <span class="fu">nest</span>(iris, <span class="at">petal =</span> <span class="fu">starts_with</span>(<span class="st">"Petal"</span>), </span>
+<span id="cb56-2"><a></a>       <span class="at">sepal =</span> <span class="fu">starts_with</span>(<span class="st">"Sepal"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </font><p><font size="5"></font></p>
 </div><div class="column" style="width:50%;">
 <p><font size="5"></font></p><font size="5">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href=""></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
   Species    petal             sepal            
@@ -677,7 +677,7 @@ $class
 2 versicolor &lt;tibble [50 × 2]&gt; &lt;tibble [50 × 2]&gt;
 3 virginica  &lt;tibble [50 × 2]&gt; &lt;tibble [50 × 2]&gt;</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href=""></a><span class="fu">head</span>(iris[[<span class="dv">2</span>]][[<span class="dv">1</span>]]) <span class="co"># see 1st row 2nd column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">head</span>(iris[[<span class="dv">2</span>]][[<span class="dv">1</span>]]) <span class="co"># see 1st row 2nd column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   Petal.Length Petal.Width
@@ -689,7 +689,7 @@ $class
 5          1.4         0.2
 6          1.7         0.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href=""></a><span class="fu">str</span>(iris<span class="sc">$</span>petal[[<span class="dv">1</span>]]) <span class="co"># structure of 1st row of petal column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a><span class="fu">str</span>(iris<span class="sc">$</span>petal[[<span class="dv">1</span>]]) <span class="co"># structure of 1st row of petal column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [50 × 2] (S3: tbl_df/tbl/data.frame)
  $ Petal.Length: num [1:50] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
@@ -717,7 +717,7 @@ $class
 <section id="sf-object" class="slide level2">
 <h2>sf object</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href=""></a><span class="fu">s3_class</span>(dec_lakes_sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a><span class="fu">s3_class</span>(dec_lakes_sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "sf"         "tbl_df"     "tbl"        "data.frame"</code></pre>
 </div>
@@ -726,7 +726,7 @@ $class
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href=""></a><span class="fu">head</span>(dec_lakes_sf[,<span class="fu">c</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">6</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a><span class="fu">head</span>(dec_lakes_sf[,<span class="fu">c</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">6</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><font size="4"></font></p><font size="4">
 <div class="cell" data-layout-align="center">
@@ -751,7 +751,7 @@ Precision:     50
 </font><p><font size="4"></font></p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href=""></a><span class="fu">attributes</span>(dec_lakes_sf<span class="sc">$</span>geometry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a><span class="fu">attributes</span>(dec_lakes_sf<span class="sc">$</span>geometry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><font size="4"></font></p><font size="4">
 <div class="cell" data-layout-align="center">
@@ -810,11 +810,11 @@ $bbox
 <h1>S4 Objects</h1>
 <p>While S3 objects are lax, S4 objects have more rigor for acceptable values</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href=""></a><span class="fu">otype</span>(dec_lakes_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a></a><span class="fu">otype</span>(dec_lakes_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S4"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href=""></a><span class="fu">s3_class</span>(dec_lakes_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="fu">s3_class</span>(dec_lakes_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "SpatialPolygonsDataFrame"
 attr(,"package")
@@ -823,8 +823,8 @@ attr(,"package")
 </div>
 <p>Slots can be accessed a couple ways, with the 1<sup>st</sup> being preferred</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href=""></a><span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)</span>
-<span id="cb73-2"><a href=""></a>dec_lakes_sp<span class="sc">@</span>polygons</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)</span>
+<span id="cb73-2"><a></a>dec_lakes_sp<span class="sc">@</span>polygons</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 <p>Examples of S4 objects include the lovely Raster, and Spatial*(e.g.&nbsp;Points, Polygons, Dataframes…) objects. I find that lists, and S4 objects terrify virtually all of our students each year. Myself included, and in fact I am still slightly spooked by them. While I cannot teach you all how exactly to deal with them, I can teach you all of use them day to day.</p>
@@ -855,7 +855,7 @@ attr(,"package")
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href=""></a><span class="fu">str</span>(dec_lakes_sp, <span class="at">max.level =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">str</span>(dec_lakes_sp, <span class="at">max.level =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><font size="5"></font></p><font size="5">
 <div class="cell" data-layout-align="center">
@@ -873,12 +873,12 @@ attr(,"package")
 </font><p><font size="5"></font></p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb76" data-code-line-numbers="4,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href=""></a>sN <span class="ot">&lt;-</span> <span class="fu">slotNames</span>(dec_lakes_sp)</span>
-<span id="cb76-2"><a href=""></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(sN)){</span>
-<span id="cb76-3"><a href=""></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(sN[i], <span class="st">': '</span>, </span>
-<span id="cb76-4"><a href=""></a>               <span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, sN[i])</span>
-<span id="cb76-5"><a href=""></a>                     )))</span>
-<span id="cb76-6"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76" data-code-line-numbers="4,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a>sN <span class="ot">&lt;-</span> <span class="fu">slotNames</span>(dec_lakes_sp)</span>
+<span id="cb76-2"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(sN)){</span>
+<span id="cb76-3"><a></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(sN[i], <span class="st">': '</span>, </span>
+<span id="cb76-4"><a></a>               <span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, sN[i])</span>
+<span id="cb76-5"><a></a>                     )))</span>
+<span id="cb76-6"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data: S3"
 [1] "polygons: base"
@@ -886,7 +886,7 @@ attr(,"package")
 [1] "bbox: base"
 [1] "proj4string: S4"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb78" data-code-line-numbers="4,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href=""></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78" data-code-line-numbers="4,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S4"</code></pre>
 </div>
@@ -911,7 +911,7 @@ attr(,"package")
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href=""></a><span class="fu">head</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>))[,<span class="fu">c</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a></a><span class="fu">head</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>))[,<span class="fu">c</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><font size="6"></font></p><font size="6">
 <div class="cell" data-layout-align="center">
@@ -928,7 +928,7 @@ attr(,"package")
 </font><p><font size="6"></font></p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href=""></a><span class="fu">attributes</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a><span class="fu">attributes</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$names
 [1] "id"          "Water"       "Data_source" "Processing"  "Date"       
@@ -939,11 +939,11 @@ $class
 $row.names
  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href=""></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S3"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href=""></a><span class="fu">writeLines</span>(<span class="fu">s3_class</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a></a><span class="fu">writeLines</span>(<span class="fu">s3_class</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'data'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>data.frame</code></pre>
 </div>
@@ -970,20 +970,20 @@ $row.names
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href=""></a><span class="fu">s3_class</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'proj4string'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a><span class="fu">s3_class</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'proj4string'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "CRS"
 attr(,"package")
 [1] "sp"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href=""></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'proj4string'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'proj4string'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S4"</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href=""></a><span class="fu">attributes</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'proj4string'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a></a><span class="fu">attributes</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'proj4string'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$projargs
 [1] "+proj=longlat +datum=WGS84 +no_defs"
@@ -1017,7 +1017,7 @@ $comment
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href=""></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)[[<span class="dv">9</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a></a><span class="fu">otype</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)[[<span class="dv">9</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S4"</code></pre>
 </div>
@@ -1025,7 +1025,7 @@ $comment
 <p>Contains the actual spatial data, e.g.&nbsp;coordinates and their relations</p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href=""></a><span class="fu">attributes</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)[[<span class="dv">9</span>]]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a></a><span class="fu">attributes</span>(<span class="fu">slot</span>(dec_lakes_sp, <span class="st">'polygons'</span>)[[<span class="dv">9</span>]]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Polygons
 $Polygons[[1]]
@@ -1096,7 +1096,7 @@ $comment
 <h2>Raster Objects</h2>
 <p>Finally we have the Raster Layer which is a rather large and complex S4 unit, composed of 12 main S4 slots… Each of these then having from 1 to 13 slots (these second slots quite small, and not uncommonly consisting of a single value).</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href=""></a><span class="fu">slotNames</span>(example_raster_dec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a></a><span class="fu">slotNames</span>(example_raster_dec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "file"     "data"     "legend"   "title"    "extent"   "rotated" 
  [7] "rotation" "ncols"    "nrows"    "crs"      "srs"      "history" 
@@ -1144,34 +1144,34 @@ numeric</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href=""></a>course <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb104-2"><a href=""></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Lecture"</span>, <span class="st">"Lecture"</span>, <span class="st">"Laboratory"</span>, <span class="st">"Laboratory"</span>),</span>
-<span id="cb104-3"><a href=""></a>  <span class="at">wing =</span> <span class="fu">c</span>(<span class="st">'L'</span>, <span class="st">'L'</span>,<span class="st">'M'</span>,<span class="st">'L'</span>),</span>
-<span id="cb104-4"><a href=""></a>  <span class="at">room =</span> <span class="fu">c</span>(<span class="dv">170</span>, <span class="dv">170</span>, <span class="dv">166</span>, <span class="dv">62</span>),</span>
-<span id="cb104-5"><a href=""></a>  <span class="at">day  =</span> <span class="fu">c</span>(<span class="st">'T'</span>, <span class="st">'TH'</span>, <span class="st">'F'</span>, <span class="st">'F'</span>),</span>
-<span id="cb104-6"><a href=""></a>  <span class="at">time =</span> <span class="fu">c</span>(<span class="st">'3:30-4:50'</span>, <span class="st">'3:30-4:50'</span>, <span class="st">'12:00-12:50'</span>, <span class="st">'2:00-3:50'</span>)</span>
-<span id="cb104-7"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a></a>course <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb104-2"><a></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Lecture"</span>, <span class="st">"Lecture"</span>, <span class="st">"Laboratory"</span>, <span class="st">"Laboratory"</span>),</span>
+<span id="cb104-3"><a></a>  <span class="at">wing =</span> <span class="fu">c</span>(<span class="st">'L'</span>, <span class="st">'L'</span>,<span class="st">'M'</span>,<span class="st">'L'</span>),</span>
+<span id="cb104-4"><a></a>  <span class="at">room =</span> <span class="fu">c</span>(<span class="dv">170</span>, <span class="dv">170</span>, <span class="dv">166</span>, <span class="dv">62</span>),</span>
+<span id="cb104-5"><a></a>  <span class="at">day  =</span> <span class="fu">c</span>(<span class="st">'T'</span>, <span class="st">'TH'</span>, <span class="st">'F'</span>, <span class="st">'F'</span>),</span>
+<span id="cb104-6"><a></a>  <span class="at">time =</span> <span class="fu">c</span>(<span class="st">'3:30-4:50'</span>, <span class="st">'3:30-4:50'</span>, <span class="st">'12:00-12:50'</span>, <span class="st">'2:00-3:50'</span>)</span>
+<span id="cb104-7"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href=""></a><span class="co"># we have only made a list so far </span></span>
-<span id="cb105-2"><a href=""></a><span class="fu">s3_class</span>(course) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a></a><span class="co"># we have only made a list so far </span></span>
+<span id="cb105-2"><a></a><span class="fu">s3_class</span>(course) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "list"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href=""></a><span class="fu">otype</span>(course)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a></a><span class="fu">otype</span>(course)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "base"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href=""></a><span class="fu">class</span>(course) <span class="ot">&lt;-</span> <span class="st">"Class_times"</span> </span>
-<span id="cb109-2"><a href=""></a><span class="co"># by setting a class attribute we have </span></span>
-<span id="cb109-3"><a href=""></a><span class="co"># created an S3 object</span></span>
-<span id="cb109-4"><a href=""></a></span>
-<span id="cb109-5"><a href=""></a><span class="fu">s3_class</span>(course)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a></a><span class="fu">class</span>(course) <span class="ot">&lt;-</span> <span class="st">"Class_times"</span> </span>
+<span id="cb109-2"><a></a><span class="co"># by setting a class attribute we have </span></span>
+<span id="cb109-3"><a></a><span class="co"># created an S3 object</span></span>
+<span id="cb109-4"><a></a></span>
+<span id="cb109-5"><a></a><span class="fu">s3_class</span>(course)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Class_times"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href=""></a><span class="fu">otype</span>(course)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a></a><span class="fu">otype</span>(course)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S3"</code></pre>
 </div>
@@ -1199,41 +1199,41 @@ numeric</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href=""></a>course <span class="ot">&lt;-</span> <span class="cf">function</span>(n, w, r, d, t){</span>
-<span id="cb113-2"><a href=""></a>  </span>
-<span id="cb113-3"><a href=""></a>  values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb113-4"><a href=""></a>    <span class="at">name =</span> n, </span>
-<span id="cb113-5"><a href=""></a>    <span class="at">wing =</span> w, </span>
-<span id="cb113-6"><a href=""></a>    <span class="at">room =</span> r, </span>
-<span id="cb113-7"><a href=""></a>    <span class="at">day =</span> d, </span>
-<span id="cb113-8"><a href=""></a>    <span class="at">time =</span> t)</span>
-<span id="cb113-9"><a href=""></a>    </span>
-<span id="cb113-10"><a href=""></a>  <span class="st">'%notin%'</span> <span class="ot">&lt;-</span> <span class="fu">Negate</span>(<span class="st">'%in%'</span>)</span>
-<span id="cb113-11"><a href=""></a>  type <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Lecture'</span>, <span class="st">'Laboratory'</span>, <span class="st">'Seminar'</span>)</span>
-<span id="cb113-12"><a href=""></a>  tech_letters <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">13</span>]</span>
-<span id="cb113-13"><a href=""></a>  days <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'M'</span>, <span class="st">'T'</span>, <span class="st">'W'</span>, <span class="st">'TH'</span>, <span class="st">'F'</span>, <span class="st">'S'</span>, <span class="st">'SU'</span>)</span>
-<span id="cb113-14"><a href=""></a>  </span>
-<span id="cb113-15"><a href=""></a>  <span class="cf">if</span>(<span class="fu">any</span>(w <span class="sc">%notin%</span> tech_letters)) </span>
-<span id="cb113-16"><a href=""></a>    <span class="fu">stop</span>(<span class="st">"This wing is not valid"</span>)</span>
-<span id="cb113-17"><a href=""></a>  <span class="cf">if</span>(<span class="fu">any</span>(d <span class="sc">%notin%</span> days)) </span>
-<span id="cb113-18"><a href=""></a>    <span class="fu">stop</span>(<span class="st">"This day is not valid"</span>)</span>
-<span id="cb113-19"><a href=""></a>  <span class="cf">if</span>(<span class="fu">any</span>(n <span class="sc">%notin%</span> type)) </span>
-<span id="cb113-20"><a href=""></a>    <span class="fu">stop</span>(<span class="st">"This course type is not valid"</span>)</span>
-<span id="cb113-21"><a href=""></a>  </span>
-<span id="cb113-22"><a href=""></a>  <span class="fu">attr</span>(values, <span class="st">"class"</span>) <span class="ot">&lt;-</span> <span class="st">"Course"</span></span>
-<span id="cb113-23"><a href=""></a>  <span class="fu">return</span>(values)</span>
-<span id="cb113-24"><a href=""></a>  </span>
-<span id="cb113-25"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a></a>course <span class="ot">&lt;-</span> <span class="cf">function</span>(n, w, r, d, t){</span>
+<span id="cb113-2"><a></a>  </span>
+<span id="cb113-3"><a></a>  values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb113-4"><a></a>    <span class="at">name =</span> n, </span>
+<span id="cb113-5"><a></a>    <span class="at">wing =</span> w, </span>
+<span id="cb113-6"><a></a>    <span class="at">room =</span> r, </span>
+<span id="cb113-7"><a></a>    <span class="at">day =</span> d, </span>
+<span id="cb113-8"><a></a>    <span class="at">time =</span> t)</span>
+<span id="cb113-9"><a></a>    </span>
+<span id="cb113-10"><a></a>  <span class="st">'%notin%'</span> <span class="ot">&lt;-</span> <span class="fu">Negate</span>(<span class="st">'%in%'</span>)</span>
+<span id="cb113-11"><a></a>  type <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Lecture'</span>, <span class="st">'Laboratory'</span>, <span class="st">'Seminar'</span>)</span>
+<span id="cb113-12"><a></a>  tech_letters <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">13</span>]</span>
+<span id="cb113-13"><a></a>  days <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'M'</span>, <span class="st">'T'</span>, <span class="st">'W'</span>, <span class="st">'TH'</span>, <span class="st">'F'</span>, <span class="st">'S'</span>, <span class="st">'SU'</span>)</span>
+<span id="cb113-14"><a></a>  </span>
+<span id="cb113-15"><a></a>  <span class="cf">if</span>(<span class="fu">any</span>(w <span class="sc">%notin%</span> tech_letters)) </span>
+<span id="cb113-16"><a></a>    <span class="fu">stop</span>(<span class="st">"This wing is not valid"</span>)</span>
+<span id="cb113-17"><a></a>  <span class="cf">if</span>(<span class="fu">any</span>(d <span class="sc">%notin%</span> days)) </span>
+<span id="cb113-18"><a></a>    <span class="fu">stop</span>(<span class="st">"This day is not valid"</span>)</span>
+<span id="cb113-19"><a></a>  <span class="cf">if</span>(<span class="fu">any</span>(n <span class="sc">%notin%</span> type)) </span>
+<span id="cb113-20"><a></a>    <span class="fu">stop</span>(<span class="st">"This course type is not valid"</span>)</span>
+<span id="cb113-21"><a></a>  </span>
+<span id="cb113-22"><a></a>  <span class="fu">attr</span>(values, <span class="st">"class"</span>) <span class="ot">&lt;-</span> <span class="st">"Course"</span></span>
+<span id="cb113-23"><a></a>  <span class="fu">return</span>(values)</span>
+<span id="cb113-24"><a></a>  </span>
+<span id="cb113-25"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href=""></a>course_success <span class="ot">&lt;-</span> <span class="fu">course</span>(</span>
-<span id="cb114-2"><a href=""></a>  <span class="fu">c</span>(<span class="st">"Lecture"</span>, <span class="st">"Lecture"</span>, <span class="st">"Laboratory"</span>, <span class="st">"Laboratory"</span>),  </span>
-<span id="cb114-3"><a href=""></a>  <span class="fu">c</span>(<span class="st">'L'</span>, <span class="st">'L'</span>,<span class="st">'M'</span>,<span class="st">'L'</span>),</span>
-<span id="cb114-4"><a href=""></a>  <span class="fu">c</span>(<span class="dv">170</span>,<span class="dv">170</span>,<span class="dv">166</span>,<span class="dv">62</span>), </span>
-<span id="cb114-5"><a href=""></a>  <span class="fu">c</span>(<span class="st">'T'</span>,<span class="st">'TH'</span>,<span class="st">'F'</span>,<span class="st">'F'</span>), </span>
-<span id="cb114-6"><a href=""></a>  <span class="fu">c</span>(<span class="st">'3:30-4:50'</span>,<span class="st">'3:30-4:50'</span>, <span class="st">'12:00-12:50'</span>, <span class="st">'2:00-3:50'</span>)</span>
-<span id="cb114-7"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a></a>course_success <span class="ot">&lt;-</span> <span class="fu">course</span>(</span>
+<span id="cb114-2"><a></a>  <span class="fu">c</span>(<span class="st">"Lecture"</span>, <span class="st">"Lecture"</span>, <span class="st">"Laboratory"</span>, <span class="st">"Laboratory"</span>),  </span>
+<span id="cb114-3"><a></a>  <span class="fu">c</span>(<span class="st">'L'</span>, <span class="st">'L'</span>,<span class="st">'M'</span>,<span class="st">'L'</span>),</span>
+<span id="cb114-4"><a></a>  <span class="fu">c</span>(<span class="dv">170</span>,<span class="dv">170</span>,<span class="dv">166</span>,<span class="dv">62</span>), </span>
+<span id="cb114-5"><a></a>  <span class="fu">c</span>(<span class="st">'T'</span>,<span class="st">'TH'</span>,<span class="st">'F'</span>,<span class="st">'F'</span>), </span>
+<span id="cb114-6"><a></a>  <span class="fu">c</span>(<span class="st">'3:30-4:50'</span>,<span class="st">'3:30-4:50'</span>, <span class="st">'12:00-12:50'</span>, <span class="st">'2:00-3:50'</span>)</span>
+<span id="cb114-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div></div>
 <aside class="notes">
@@ -1257,16 +1257,16 @@ numeric</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href=""></a>course_fail <span class="ot">&lt;-</span> <span class="fu">course</span>(</span>
-<span id="cb115-2"><a href=""></a>  <span class="st">"Lecture"</span>,  </span>
-<span id="cb115-3"><a href=""></a>  <span class="st">'Z'</span>, <span class="co"># THIS IS NOT DEFINED</span></span>
-<span id="cb115-4"><a href=""></a>  <span class="dv">213</span>, </span>
-<span id="cb115-5"><a href=""></a>  <span class="st">'TH'</span>, </span>
-<span id="cb115-6"><a href=""></a>  <span class="st">'2:00-3:50'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a></a>course_fail <span class="ot">&lt;-</span> <span class="fu">course</span>(</span>
+<span id="cb115-2"><a></a>  <span class="st">"Lecture"</span>,  </span>
+<span id="cb115-3"><a></a>  <span class="st">'Z'</span>, <span class="co"># THIS IS NOT DEFINED</span></span>
+<span id="cb115-4"><a></a>  <span class="dv">213</span>, </span>
+<span id="cb115-5"><a></a>  <span class="st">'TH'</span>, </span>
+<span id="cb115-6"><a></a>  <span class="st">'2:00-3:50'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href=""></a>Error <span class="cf">in</span> <span class="fu">course</span>(<span class="st">"Lecture"</span>, <span class="st">"Z"</span>, <span class="dv">213</span>, <span class="st">"TH"</span>, <span class="st">"2:00-3:50"</span>) <span class="sc">:</span> </span>
-<span id="cb116-2"><a href=""></a>This wing is not valid<span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a></a>Error <span class="cf">in</span> <span class="fu">course</span>(<span class="st">"Lecture"</span>, <span class="st">"Z"</span>, <span class="dv">213</span>, <span class="st">"TH"</span>, <span class="st">"2:00-3:50"</span>) <span class="sc">:</span> </span>
+<span id="cb116-2"><a></a>This wing is not valid<span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <ul>
@@ -1295,18 +1295,18 @@ numeric</code></pre>
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href=""></a><span class="fu">setClass</span>(<span class="st">"Office_Hours"</span>, </span>
-<span id="cb117-2"><a href=""></a>         <span class="at">slots=</span></span>
-<span id="cb117-3"><a href=""></a>           <span class="fu">list</span>(</span>
-<span id="cb117-4"><a href=""></a>            <span class="at">Instructor=</span><span class="st">"character"</span>,</span>
-<span id="cb117-5"><a href=""></a>            <span class="at">Wing=</span><span class="st">"character"</span>,</span>
-<span id="cb117-6"><a href=""></a>            <span class="at">Number=</span><span class="st">"numeric"</span>,</span>
-<span id="cb117-7"><a href=""></a>            <span class="at">Days=</span><span class="st">"character"</span>,</span>
-<span id="cb117-8"><a href=""></a>            <span class="at">Time=</span><span class="st">"numeric"</span>,</span>
-<span id="cb117-9"><a href=""></a>            <span class="at">Smartroom=</span><span class="st">"logical"</span>,</span>
-<span id="cb117-10"><a href=""></a>            <span class="at">Windows=</span><span class="st">"logical"</span></span>
-<span id="cb117-11"><a href=""></a>            )</span>
-<span id="cb117-12"><a href=""></a>         )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a></a><span class="fu">setClass</span>(<span class="st">"Office_Hours"</span>, </span>
+<span id="cb117-2"><a></a>         <span class="at">slots=</span></span>
+<span id="cb117-3"><a></a>           <span class="fu">list</span>(</span>
+<span id="cb117-4"><a></a>            <span class="at">Instructor=</span><span class="st">"character"</span>,</span>
+<span id="cb117-5"><a></a>            <span class="at">Wing=</span><span class="st">"character"</span>,</span>
+<span id="cb117-6"><a></a>            <span class="at">Number=</span><span class="st">"numeric"</span>,</span>
+<span id="cb117-7"><a></a>            <span class="at">Days=</span><span class="st">"character"</span>,</span>
+<span id="cb117-8"><a></a>            <span class="at">Time=</span><span class="st">"numeric"</span>,</span>
+<span id="cb117-9"><a></a>            <span class="at">Smartroom=</span><span class="st">"logical"</span>,</span>
+<span id="cb117-10"><a></a>            <span class="at">Windows=</span><span class="st">"logical"</span></span>
+<span id="cb117-11"><a></a>            )</span>
+<span id="cb117-12"><a></a>         )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
 <ul>
@@ -1334,15 +1334,15 @@ numeric</code></pre>
 <h2>Create a simple S4 object II</h2>
 <p>We can populate our S4 object like this, notice that now we define the slots the values go into.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href=""></a>s4_ob_office_hours <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"Office_Hours"</span>, </span>
-<span id="cb118-2"><a href=""></a>  <span class="at">Instructor =</span> <span class="fu">c</span>(<span class="st">'Benkendorf'</span>,<span class="st">'Scholl'</span>,<span class="st">'Benkendorf'</span>,<span class="st">'Scholl'</span>),</span>
-<span id="cb118-3"><a href=""></a>  <span class="at">Wing =</span> <span class="fu">c</span>(<span class="st">'F'</span>, <span class="st">'F'</span>, <span class="st">'G'</span>, <span class="st">'B'</span>),</span>
-<span id="cb118-4"><a href=""></a>  <span class="at">Number =</span> <span class="fu">c</span>(<span class="dv">380</span>, <span class="dv">380</span>, <span class="dv">278</span>, <span class="dv">138</span>),</span>
-<span id="cb118-5"><a href=""></a>  <span class="at">Days =</span> <span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"W"</span>, <span class="st">'T'</span>, <span class="st">'F'</span>),</span>
-<span id="cb118-6"><a href=""></a>  <span class="at">Time =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">9</span>, <span class="dv">3</span>),</span>
-<span id="cb118-7"><a href=""></a>  <span class="at">Smartroom =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, F, T, F),</span>
-<span id="cb118-8"><a href=""></a>  <span class="at">Windows =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, T, T, F)</span>
-<span id="cb118-9"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a></a>s4_ob_office_hours <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"Office_Hours"</span>, </span>
+<span id="cb118-2"><a></a>  <span class="at">Instructor =</span> <span class="fu">c</span>(<span class="st">'Benkendorf'</span>,<span class="st">'Scholl'</span>,<span class="st">'Benkendorf'</span>,<span class="st">'Scholl'</span>),</span>
+<span id="cb118-3"><a></a>  <span class="at">Wing =</span> <span class="fu">c</span>(<span class="st">'F'</span>, <span class="st">'F'</span>, <span class="st">'G'</span>, <span class="st">'B'</span>),</span>
+<span id="cb118-4"><a></a>  <span class="at">Number =</span> <span class="fu">c</span>(<span class="dv">380</span>, <span class="dv">380</span>, <span class="dv">278</span>, <span class="dv">138</span>),</span>
+<span id="cb118-5"><a></a>  <span class="at">Days =</span> <span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"W"</span>, <span class="st">'T'</span>, <span class="st">'F'</span>),</span>
+<span id="cb118-6"><a></a>  <span class="at">Time =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">9</span>, <span class="dv">3</span>),</span>
+<span id="cb118-7"><a></a>  <span class="at">Smartroom =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, F, T, F),</span>
+<span id="cb118-8"><a></a>  <span class="at">Windows =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, T, T, F)</span>
+<span id="cb118-9"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 <p>In it’s simplest form an s4 object may be constructed via the <code>setClass</code> function. While this object is able to regulate the data types which are entered to each column, it cannot do much more.</p>
@@ -1364,33 +1364,33 @@ numeric</code></pre>
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href=""></a>office_hrs <span class="ot">&lt;-</span> <span class="fu">setClass</span>(<span class="st">"Office_Hours"</span>, </span>
-<span id="cb119-2"><a href=""></a>         </span>
-<span id="cb119-3"><a href=""></a>         <span class="at">slots=</span><span class="fu">c</span>(</span>
-<span id="cb119-4"><a href=""></a>           <span class="at">Instructor=</span><span class="st">"character"</span>,</span>
-<span id="cb119-5"><a href=""></a>           <span class="at">Wing=</span><span class="st">"character"</span>,</span>
-<span id="cb119-6"><a href=""></a>           <span class="at">Number=</span><span class="st">"numeric"</span>,</span>
-<span id="cb119-7"><a href=""></a>           <span class="at">Days=</span><span class="st">"character"</span>,</span>
-<span id="cb119-8"><a href=""></a>           <span class="at">Time=</span><span class="st">"numeric"</span>,</span>
-<span id="cb119-9"><a href=""></a>           <span class="at">Smartroom=</span><span class="st">"logical"</span>,</span>
-<span id="cb119-10"><a href=""></a>           <span class="at">Windows=</span><span class="st">"logical"</span></span>
-<span id="cb119-11"><a href=""></a>           ),</span>
-<span id="cb119-12"><a href=""></a>         </span>
-<span id="cb119-13"><a href=""></a>        <span class="at">validity=</span><span class="cf">function</span>(object){</span>
-<span id="cb119-14"><a href=""></a>          </span>
-<span id="cb119-15"><a href=""></a>            <span class="st">'%notin%'</span> <span class="ot">&lt;-</span> <span class="fu">Negate</span>(<span class="st">'%in%'</span>)</span>
-<span id="cb119-16"><a href=""></a>            tech_letters <span class="ot">&lt;-</span> LETTERS[<span class="dv">14</span><span class="sc">:</span><span class="dv">26</span>]</span>
-<span id="cb119-17"><a href=""></a>            days <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'M'</span>, <span class="st">'T'</span>, <span class="st">'W'</span>, <span class="st">'TH'</span>, <span class="st">'F'</span>, <span class="st">'S'</span>, <span class="st">'SU'</span>)</span>
-<span id="cb119-18"><a href=""></a>            instructors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Scholl'</span>, <span class="st">'Benkendorf'</span>)</span>
-<span id="cb119-19"><a href=""></a>                </span>
-<span id="cb119-20"><a href=""></a>            <span class="cf">if</span>(<span class="fu">any</span>(object<span class="sc">@</span>Instructor <span class="sc">!=</span> instructors))</span>
-<span id="cb119-21"><a href=""></a>              <span class="fu">stop</span>(<span class="st">"This Instructor is not valid"</span>)</span>
-<span id="cb119-22"><a href=""></a>            <span class="cf">if</span>(<span class="fu">any</span>(object<span class="sc">@</span>Wing <span class="sc">%in%</span> tech_letters))</span>
-<span id="cb119-23"><a href=""></a>              <span class="fu">stop</span>(<span class="st">"This Wing is not valid"</span>)</span>
-<span id="cb119-24"><a href=""></a>            <span class="cf">if</span>(<span class="fu">any</span>(object<span class="sc">@</span>Days <span class="sc">%notin%</span> days)) </span>
-<span id="cb119-25"><a href=""></a>              <span class="fu">stop</span>(<span class="st">"This Day is not valid"</span>)</span>
-<span id="cb119-26"><a href=""></a>  }</span>
-<span id="cb119-27"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a></a>office_hrs <span class="ot">&lt;-</span> <span class="fu">setClass</span>(<span class="st">"Office_Hours"</span>, </span>
+<span id="cb119-2"><a></a>         </span>
+<span id="cb119-3"><a></a>         <span class="at">slots=</span><span class="fu">c</span>(</span>
+<span id="cb119-4"><a></a>           <span class="at">Instructor=</span><span class="st">"character"</span>,</span>
+<span id="cb119-5"><a></a>           <span class="at">Wing=</span><span class="st">"character"</span>,</span>
+<span id="cb119-6"><a></a>           <span class="at">Number=</span><span class="st">"numeric"</span>,</span>
+<span id="cb119-7"><a></a>           <span class="at">Days=</span><span class="st">"character"</span>,</span>
+<span id="cb119-8"><a></a>           <span class="at">Time=</span><span class="st">"numeric"</span>,</span>
+<span id="cb119-9"><a></a>           <span class="at">Smartroom=</span><span class="st">"logical"</span>,</span>
+<span id="cb119-10"><a></a>           <span class="at">Windows=</span><span class="st">"logical"</span></span>
+<span id="cb119-11"><a></a>           ),</span>
+<span id="cb119-12"><a></a>         </span>
+<span id="cb119-13"><a></a>        <span class="at">validity=</span><span class="cf">function</span>(object){</span>
+<span id="cb119-14"><a></a>          </span>
+<span id="cb119-15"><a></a>            <span class="st">'%notin%'</span> <span class="ot">&lt;-</span> <span class="fu">Negate</span>(<span class="st">'%in%'</span>)</span>
+<span id="cb119-16"><a></a>            tech_letters <span class="ot">&lt;-</span> LETTERS[<span class="dv">14</span><span class="sc">:</span><span class="dv">26</span>]</span>
+<span id="cb119-17"><a></a>            days <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'M'</span>, <span class="st">'T'</span>, <span class="st">'W'</span>, <span class="st">'TH'</span>, <span class="st">'F'</span>, <span class="st">'S'</span>, <span class="st">'SU'</span>)</span>
+<span id="cb119-18"><a></a>            instructors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Scholl'</span>, <span class="st">'Benkendorf'</span>)</span>
+<span id="cb119-19"><a></a>                </span>
+<span id="cb119-20"><a></a>            <span class="cf">if</span>(<span class="fu">any</span>(object<span class="sc">@</span>Instructor <span class="sc">!=</span> instructors))</span>
+<span id="cb119-21"><a></a>              <span class="fu">stop</span>(<span class="st">"This Instructor is not valid"</span>)</span>
+<span id="cb119-22"><a></a>            <span class="cf">if</span>(<span class="fu">any</span>(object<span class="sc">@</span>Wing <span class="sc">%in%</span> tech_letters))</span>
+<span id="cb119-23"><a></a>              <span class="fu">stop</span>(<span class="st">"This Wing is not valid"</span>)</span>
+<span id="cb119-24"><a></a>            <span class="cf">if</span>(<span class="fu">any</span>(object<span class="sc">@</span>Days <span class="sc">%notin%</span> days)) </span>
+<span id="cb119-25"><a></a>              <span class="fu">stop</span>(<span class="st">"This Day is not valid"</span>)</span>
+<span id="cb119-26"><a></a>  }</span>
+<span id="cb119-27"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
 <p><font size="5"> - Mandates the appropriate data type is entered<br>
@@ -1405,21 +1405,21 @@ numeric</code></pre>
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href=""></a>s4_ob_office_hours <span class="ot">&lt;-</span> <span class="fu">office_hrs</span>( </span>
-<span id="cb120-2"><a href=""></a>  <span class="at">Instructor =</span> <span class="fu">c</span>(<span class="st">'Scholl'</span>, <span class="st">'Benkendorf'</span>, <span class="st">'Scholl'</span>, <span class="st">'Benkendorf'</span>),</span>
-<span id="cb120-3"><a href=""></a>  <span class="at">Wing =</span> <span class="fu">c</span>(<span class="st">'A'</span>, <span class="st">'F'</span>, <span class="st">'B'</span>, <span class="st">'B'</span>),</span>
-<span id="cb120-4"><a href=""></a>  <span class="at">Number =</span> <span class="fu">c</span>(<span class="dv">123</span>, <span class="dv">412</span>, <span class="dv">278</span>, <span class="dv">138</span>),</span>
-<span id="cb120-5"><a href=""></a>  <span class="at">Days =</span> <span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"W"</span>, <span class="st">'T'</span>, <span class="st">'F'</span>),</span>
-<span id="cb120-6"><a href=""></a>  <span class="at">Time =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">9</span>, <span class="dv">3</span>),</span>
-<span id="cb120-7"><a href=""></a>  <span class="at">Smartroom =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, F, T, F),</span>
-<span id="cb120-8"><a href=""></a>  <span class="at">Windows =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, T, T, F)</span>
-<span id="cb120-9"><a href=""></a>)</span>
-<span id="cb120-10"><a href=""></a></span>
-<span id="cb120-11"><a href=""></a><span class="fu">otype</span>(s4_ob_office_hours)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a></a>s4_ob_office_hours <span class="ot">&lt;-</span> <span class="fu">office_hrs</span>( </span>
+<span id="cb120-2"><a></a>  <span class="at">Instructor =</span> <span class="fu">c</span>(<span class="st">'Scholl'</span>, <span class="st">'Benkendorf'</span>, <span class="st">'Scholl'</span>, <span class="st">'Benkendorf'</span>),</span>
+<span id="cb120-3"><a></a>  <span class="at">Wing =</span> <span class="fu">c</span>(<span class="st">'A'</span>, <span class="st">'F'</span>, <span class="st">'B'</span>, <span class="st">'B'</span>),</span>
+<span id="cb120-4"><a></a>  <span class="at">Number =</span> <span class="fu">c</span>(<span class="dv">123</span>, <span class="dv">412</span>, <span class="dv">278</span>, <span class="dv">138</span>),</span>
+<span id="cb120-5"><a></a>  <span class="at">Days =</span> <span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"W"</span>, <span class="st">'T'</span>, <span class="st">'F'</span>),</span>
+<span id="cb120-6"><a></a>  <span class="at">Time =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">9</span>, <span class="dv">3</span>),</span>
+<span id="cb120-7"><a></a>  <span class="at">Smartroom =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, F, T, F),</span>
+<span id="cb120-8"><a></a>  <span class="at">Windows =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, T, T, F)</span>
+<span id="cb120-9"><a></a>)</span>
+<span id="cb120-10"><a></a></span>
+<span id="cb120-11"><a></a><span class="fu">otype</span>(s4_ob_office_hours)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "S4"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href=""></a><span class="fu">s3_class</span>(s4_ob_office_hours)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a></a><span class="fu">s3_class</span>(s4_ob_office_hours)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Office_Hours"
 attr(,"package")
@@ -1456,6 +1456,7 @@ attr(,"package")
 <p><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object Oriented Programming Wikipedia</a> Accessed 01.19.2022<br>
 <font></font></p><font>
 
+
 </font></font></section><font size="6"><font>
     </font></font></div><font size="6"><font>
   </font></font><div class="quarto-auto-generated-content" style="display: none;">
@@ -1466,20 +1467,20 @@ attr(,"package")
 </div></div><font size="6"><font>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Object-OrientedProgramming_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
