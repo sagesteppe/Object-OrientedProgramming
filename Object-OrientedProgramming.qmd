@@ -1,5 +1,5 @@
 ---
-title: "Objected Oriented Programming"
+title: "Objected-Oriented Programming"
 subtitle: "R for Data Science"
 author: "Reed Benkendorf"
 date: "2022-February-06"
@@ -161,7 +161,7 @@ raster_dataframe <- as.data.frame(raster_matrix)
 colnames(raster_dataframe) <- c(1:ncol(raster_dataframe))
 ```
 
-# Object Orientated Programming in R
+# Object-Orientated Programming in R
 
 > "Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods)." - Wikipedia
 
@@ -307,7 +307,7 @@ otype(dates_of_imaging)
 - And it can perform calculations on itself 
 
 ::: notes 
-Objects with the capability to store values in fields, and perform procedures upon themselves form the basis of Object Orientated Programming. In R we have two main OOP classes, S3 and S4. In general objects of both of these classes are *'large'*, however this is not always the case. 
+Objects with the capability to store values in fields, and perform procedures upon themselves form the basis of Object-Orientated Programming. In R we have two main OOP classes, S3 and S4. In general objects of both of these classes are *'large'*, however this is not always the case. 
 :::
 
 ```{r}
@@ -969,5 +969,5 @@ Pebesma, E.J., R.S. Bivand, 2005. Classes and methods for spatial data in R. R N
 
 [vctrs](https://cran.r-project.org/web/packages/vctrs/vignettes/s3-vector.html) Accessed 01.14.2022  
 
-[Object Oriented Programming Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming) Accessed 01.19.2022  
+[Object-Oriented Programming Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming) Accessed 01.19.2022  
 <font> 
